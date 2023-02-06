@@ -16,19 +16,22 @@ header{
     padding: 10px;
 }
 
-header > h1 > img {
-    width: 80px;
-}
-
 nav{
     background-color: #087E8B;
     padding: 20px;
     text-align: center;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.46);
+}
+
+.logo-topo{
+    width: 80px;
+}
+
+.menu-superior{
     display: inline-flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 97%;
+    width: 95%;
 }
 
 nav > div {
@@ -103,7 +106,7 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 35vh;
+    width: 95%;
 }
 
 .produtos li:hover {
@@ -116,7 +119,7 @@ main{
 }
 
 .produto-titulo{
-    font-size: 2em;
+    font-size: 1.7em;
     font-variant: small-caps;
 }
 
