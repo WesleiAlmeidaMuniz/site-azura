@@ -7,12 +7,19 @@
 :root{
     --main-color: #087E8B;
     --seg-color: white;
-    --backg-color: #EBF5EE;
+    --backg-color: #e3e6e3;
     --backh-color: black;
+    --color-link: #FFCF00;
+    --titulo-produto: dimgray;
+    --descricao-produto: gray;
+    --font-titulo: 'DM Sans', sans-serif;
+    --font-descricao: 'Montserrat', sans-serif;
+    --font-texto: Arial, Helvetica, sans-serif;
+    --font-preco: monospace;
 }
 
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 body{
@@ -21,7 +28,7 @@ body{
 
 header{
     background-color: var(--backh-color);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-descricao);
     font-weight: bolder;
     font-size:1.5em;
     color: var(--seg-color);
@@ -37,14 +44,15 @@ nav{
 }
 
 .logo-topo{
-    width: 100px;
+   width: 60px;
 }
 
 .menu-superior{
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 95%;
+    width: 94%;
+	margin: 0 auto;
 }
 
 nav > div {
@@ -52,15 +60,16 @@ nav > div {
 }
 
 .h1-azura {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-titulo);
     font-variant: small-caps;
     font-size: 1.9em;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.48);
 }
 
 .h1-shopping{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-descricao);
     font-variant: small-caps;
+    font-weight: bold;
     font-size: 1.2em;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.48);
 }
@@ -68,14 +77,16 @@ nav > div {
 nav > div > img{
     width: 100px;
 }
-
+.menu{
+    display: flex;
+}
 .menu > a{
-    margin-right: 20px;
+    margin: 0 0 0 20px;
     color: var(--seg-color);
     text-decoration: none;
-    font-size: 1.5em;
-    font-family: 'DM Sans', sans-serif;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.48);
+    font-size: 1.25rem;
+    font-family: var(--font-titulo);
+    text-transform: uppercase;
 }
 
 .menu > a:visited{
@@ -83,7 +94,8 @@ nav > div > img{
 }
 
 .menu > a:hover{
-    color: #FFCF00;
+    color: var(--color-link);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.48);
 }
 
 a{
@@ -101,22 +113,20 @@ main{
 }
 
 .produtos {
+    width: 90%;
+    margin: 0 auto;
     text-align: center;
 }
 
 .produtos li {
     display: inline-block;
-    text-align: center;
     width: 40vh;
-    min-height: 430px;
+    min-height: 440px;
     vertical-align: top;
-    margin: 3vw 1vw;
+    margin: 1.5vw 1vw;
     padding: 40px 15px;
     box-sizing: border-box;
-    border: 1px solid rgb(98, 97, 97);
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.37);
+    background-color: var(--seg-color);
     position: relative;
 }
 
@@ -129,66 +139,73 @@ main{
 }
 
 .produtos li:hover {
-    border-color: #FFCF00;
-    transform: scale(1.1);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.508);
+    transform: scale(1.05);
 }
 
-.produtos li:hover  img{
-    width: 80%;
-}
 
 .produto-titulo{
-    font-size: 1.7em;
-    font-variant: small-caps;
+    font-size: 1.7rem;
+    margin: 10px 20px;
+    text-align: center;
+    color: var(--titulo-produto);
+    display: block;
+    height: 80px;
 }
 
 .produto-descricao{
     font-size: 1em;
-    font-variant: small-caps;
+    margin: 10px 10px;
+    text-align: left;
+    color: var(--descricao-produto);
+    display: block;
+    width: auto;
+    height: 40px;
 }
 
 .produto-preco{
-    color: rgb(238, 34, 34);
-    padding-top: 15px;
-    font-size: 2em;
-    font-family: monospace;
+    color: rgb(64, 64, 64);
+    margin: 20px 10px;
+    font-size: 2.2em;
+    font-family: var(--font-preco);
     font-weight: bolder;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.196);
+    text-align: left;
 }
 
 .produtos  li  img{
-    width: 70%;
+    height: 180px;
 }
 
 .historia{
     width: 70vw;
-    border: 2px solid var(--backh-color);
     border-radius: 10px;
-    margin: 20px auto;
-    padding: 10px;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    background-color: var(--seg-color);
+    box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.382);
 }
 
 .historia > h1 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-titulo);
     text-align: center;
-    font-size: 3em;
+    font-size: 3rem;
     font-variant: small-caps;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.397);
     padding-bottom: 20px;
 }
 
 .historia > p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-texto);
     font-size: 1.2em;
     text-align: justify;
     text-indent: 5em;
-    padding-top: 10px;
+    padding: 1.2rem 0;
 }
 
 .historia > img{
     display: block;
-    max-width: 30%;
-    margin: 10px auto;
+    width: 100%;
+    margin: 0 auto;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.543);
 }
 
@@ -222,7 +239,7 @@ form label, form legend {
     width: 40%;
     padding: 15px 0;
     background-color: var(--main-color);
-    color: white;
+    color: var(--seg-color);
     font-weight: bold;
     font-size: 18px;
     border: none;
@@ -253,6 +270,7 @@ footer a:hover {
 
     .menu {
         padding-top: 10px;
+        display: block;
     }
 
     .menu > a {
